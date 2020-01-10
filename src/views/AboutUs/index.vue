@@ -1,0 +1,49 @@
+<template>
+    <v-layout>
+        <v-flex>
+            <v-card-title class="blue white--text text-center" style="display: flex; justify-content: center">
+                    <span class="headline" style="">关于我们</span>
+                    <!--<v-spacer></v-spacer>-->
+                </v-card-title>
+                <v-card-text>
+                    1231231
+
+                </v-card-text>
+
+        </v-flex>
+    </v-layout>
+
+</template>
+
+<script>
+
+//    import {Promise} from 'q';
+
+    const PAGE_SIZE = 2
+
+    export default {
+
+        components: {},
+
+        data: () => ({}),
+
+        watch: {},
+
+        async created() {
+//            await this.init();
+        },
+
+        async mounted() {
+
+        },
+
+        computed: {},
+
+        methods: {},
+
+
+        destroyed() {
+
+        }
+    }
+</script>

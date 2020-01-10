@@ -1,0 +1,50 @@
+<template>
+    <v-layout>
+        <v-flex>
+            <v-card height="200px">
+                <v-card-title class="blue white--text text-center" style="display: flex; justify-content: center">
+                    <span class="headline" style="">基地一览</span>
+                    <!--<v-spacer></v-spacer>-->
+                </v-card-title>
+                <v-card-text>
+                    1231231
+
+                </v-card-text>
+            </v-card>
+        </v-flex>
+    </v-layout>
+
+</template>
+
+<script>
+
+//    import {Promise} from 'q';
+
+    const PAGE_SIZE = 2
+
+    export default {
+
+        components: {},
+
+        data: () => ({}),
+
+        watch: {},
+
+        async created() {
+//            await this.init();
+        },
+
+        async mounted() {
+
+        },
+
+        computed: {},
+
+        methods: {},
+
+
+        destroyed() {
+
+        }
+    }
+</script>
