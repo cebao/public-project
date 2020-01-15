@@ -8,7 +8,6 @@
         <v-img
           :src="topImage"
           class="white--text align-end"
-          height="300"
         >
 
         </v-img>
@@ -32,18 +31,16 @@
 </template>
 
 <script>
-  import pic1 from './image.png'
+  import topImage from './focus1.jpg'
 
   //    import {Promise} from 'q';
-
-  const PAGE_SIZE = 2
 
   export default {
 
     components: {},
 
     data: () => ({
-      topImage: pic1
+      topImage: topImage
     }),
 
     watch: {},

@@ -7,8 +7,8 @@
       :src="toolbarPng"
       class="light-green darken-1"
     >
-      <div class="d-flex align-center ml-10 mr-2">
-        <img src="./assets/logo.png" height="40">
+      <div class="d-flex align-center ml-10 mr-2 mb-8">
+        <img :src="logo" height="100">
         <!--                <span class="pl-2" style="color: white; font-size: 14px">华新</span>-->
       </div>
 
@@ -17,26 +17,26 @@
         <!--<v-menu v-if="" offset-y>-->
         <!--<template v-slot:activator="{ on }">-->
         <v-btn text x-large @click="onHomePage"
-               class="headline"
-               color="white"
+               class="display-1"
+               color="light-green darken-1"
         >
           首页
         </v-btn>
         <v-btn text x-large @click="onBeautifulCountry"
-               class="headline"
-               color="white"
+               class="display-1"
+               color="light-green darken-1"
         >
           美丽乡村
         </v-btn>
         <v-btn text x-large @click="onBaseList"
-               class="headline"
-               color="white"
+               class="display-1"
+               color="light-green darken-1"
         >
-          基地一览
+          青浦新闻
         </v-btn>
         <v-btn text x-large @click="onAboutUs"
-               class="headline"
-               color="white"
+               class="display-1"
+               color="light-green darken-1"
         >
           关于我们
         </v-btn>
@@ -58,7 +58,9 @@
       <v-spacer></v-spacer>
 
       <v-toolbar-items right>
-        <v-btn text color="white">联系我们</v-btn>
+        <v-btn class="headline"
+               text color="light-green darken-1">联系我们
+        </v-btn>
       </v-toolbar-items>
 
       <!--<template v-if="$vuetify.breakpoint.smAndUp">-->
@@ -92,7 +94,7 @@
       <v-layout row wrap class=""
                 style="width: 1920px; display:flex; justify-content: center; align-items: center;">
         <v-flex xs2 style="color: white;">
-          <img src="./assets/logo.png" height="80">
+          <img :src="logo" height="80">
         </v-flex>
         <v-flex xs3 style="color: white;">
           <div>上海华新苗木花卉基地</div>
@@ -120,46 +122,48 @@
 </template>
 
 <script>
-  import BasicLayout from '@/layouts/BasicLayout.vue';
-  import toolbarBackground from '@/assets/toolbar-background.png'
-  import toolbarBackground1 from '@/assets/timg.jpg'
-  //    import logo from './assets/logo.png'
-  export default {
-    name: 'App',
+    import BasicLayout from '@/layouts/BasicLayout.vue';
+    import toolbarBackground from '@/assets/toolbar-bg.jpg'
+    import logo from '@/assets/logo.png'
+    //  import toolbarBackground1 from '@/assets/timg.jpg'
+    //    import logo from './assets/logo.png'
+    export default {
+        name: 'App',
 
-    components: {
-      BasicLayout,
-    },
+        components: {
+            BasicLayout,
+        },
 
-    data: () => ({
-      toolbarPng: toolbarBackground
-    }),
-    mounted: function () {
+        data: () => ({
+            logo: logo,
+            toolbarPng: toolbarBackground
+        }),
+        mounted: function () {
 
-    },
-    methods: {
-      onHomePage() {
-        this.$router.push({
-          path: '/',
-        })
-      },
-      onBeautifulCountry() {
-        this.$router.push({
-          path: '/beautifulCountry',
-        })
-      },
-      onBaseList() {
-        this.$router.push({
-          path: '/baseList',
-        })
-      },
-      onAboutUs() {
-        this.$router.push({
-          path: '/aboutUs',
-        })
-      }
-    }
-  };
+        },
+        methods: {
+            onHomePage() {
+                this.$router.push({
+                    path: '/',
+                })
+            },
+            onBeautifulCountry() {
+                this.$router.push({
+                    path: '/beautifulCountry',
+                })
+            },
+            onBaseList() {
+                this.$router.push({
+                    path: '/baseList',
+                })
+            },
+            onAboutUs() {
+                this.$router.push({
+                    path: '/aboutUs',
+                })
+            }
+        }
+    };
 </script>
 <style>
   .v-toolbar__content {

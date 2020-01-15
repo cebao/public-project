@@ -74,7 +74,7 @@ router.beforeEach(async (to, from, next) => {
     console.log('router-----------',router)
 
     //设置标题
-    document.title = to.meta.title || 'bluebeeX'
+    document.title = to.meta.title || '华新'
     next();
     //
     //
