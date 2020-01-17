@@ -22,78 +22,100 @@
         <!--</v-card-text>-->
       </v-card>
 
-
-      <v-card
-        style="padding-left: 20px; padding-right: 20px;"
-        v-for="(item, index) in news"
-        :key="index"
+      <v-carousel
+        height="720"
       >
-        <div v-if="index % 2 == 0">
-          <v-row>
-            <v-col :cols="3">
+        <v-carousel-item
+          v-for="(item,index) in news"
+          :key="i"
+          :src="item.picture"
+          hide-delimiter-background
+          show-arrows-on-hover
+        >
+          <v-sheet
+          >
+            <v-row
+              class="fill-height"
+              align="center"
+              justify="center"
+            >
+              <div class="title">{{ item.title }}</div>
+            </v-row>
+          </v-sheet>
+        </v-carousel-item>
+      </v-carousel>
 
-            </v-col>
-            <v-col :cols="3" style="display: flex; justify-content: center; align-items: center">
-              <v-img
-                :src="item.picture"
-                class="white--text align-end"
-                width="200"
-              >
+      <!--<v-card-->
+      <!--style="padding-left: 20px; padding-right: 20px;"-->
+      <!--v-for="(item, index) in news"-->
+      <!--:key="index"-->
+      <!--&gt;-->
+      <!--<div v-if="index % 2 == 0">-->
+      <!--<v-row>-->
+      <!--<v-col :cols="3">-->
 
-              </v-img>
-            </v-col>
+      <!--</v-col>-->
+      <!--<v-col :cols="3" style="display: flex; justify-content: center; align-items: center">-->
+      <!--<v-img-->
+      <!--:src="item.picture"-->
+      <!--class="white&#45;&#45;text align-end"-->
+      <!--width="200"-->
+      <!--&gt;-->
 
-            <v-col :cols="3">
-              <v-card-title style="margin-top: 60px;">
-                {{item.title}}
-              </v-card-title>
-              <v-btn class="float-right" x-large color="success" @click="moreDetail(item.url)">
-                更多详情
-              </v-btn>
-            </v-col>
+      <!--</v-img>-->
+      <!--</v-col>-->
 
-            <v-col :cols="3">
+      <!--<v-col :cols="3">-->
+      <!--<v-card-title style="margin-top: 60px;">-->
+      <!--{{item.title}}-->
+      <!--</v-card-title>-->
+      <!--<v-btn class="float-right" x-large color="success" @click="moreDetail(item.url)">-->
+      <!--更多详情-->
+      <!--</v-btn>-->
+      <!--</v-col>-->
 
-            </v-col>
-          </v-row>
+      <!--<v-col :cols="3">-->
 
-        </div>
+      <!--</v-col>-->
+      <!--</v-row>-->
 
-        <div v-if="index % 2 == 1">
-          <v-row>
+      <!--</div>-->
 
-            <v-col :cols="3">
+      <!--<div v-if="index % 2 == 1">-->
+      <!--<v-row>-->
 
-            </v-col>
+      <!--<v-col :cols="3">-->
 
-            <v-col :cols="3">
-              <v-card-title style="margin-top: 60px;">
-                {{item.title}}
-              </v-card-title>
-              <v-btn x-large color="success" @click="moreDetail(item.url)">
-                更多详情
-              </v-btn>
-            </v-col>
+      <!--</v-col>-->
 
-            <v-col :cols="3">
-              <v-img
-                :src="item.picture"
-                class="white--text align-end"
-                width="800"
-                height="450"
-              >
+      <!--<v-col :cols="3">-->
+      <!--<v-card-title style="margin-top: 60px;">-->
+      <!--{{item.title}}-->
+      <!--</v-card-title>-->
+      <!--<v-btn x-large color="success" @click="moreDetail(item.url)">-->
+      <!--更多详情-->
+      <!--</v-btn>-->
+      <!--</v-col>-->
 
-              </v-img>
-            </v-col>
+      <!--<v-col :cols="3">-->
+      <!--<v-img-->
+      <!--:src="item.picture"-->
+      <!--class="white&#45;&#45;text align-end"-->
+      <!--width="800"-->
+      <!--height="450"-->
+      <!--&gt;-->
 
-            <v-col :cols="3">
+      <!--</v-img>-->
+      <!--</v-col>-->
 
-            </v-col>
+      <!--<v-col :cols="3">-->
 
-          </v-row>
-        </div>
+      <!--</v-col>-->
 
-      </v-card>
+      <!--</v-row>-->
+      <!--</div>-->
+
+      <!--</v-card>-->
 
     </v-flex>
   </v-layout>
@@ -140,11 +162,6 @@
                     title: "观潮｜上海这个区提出打造长三角最具制度竞争力的地区，底气在哪里？",
                     picture: news4,
                     url: "https://baijiahao.baidu.com/s?id=1655497921242236786&wfr=spider&for=pc"
-                },
-                {
-                    title: "青浦：加快进度，确保重大项目“落地生根”",
-                    picture: news4,
-                    url: "http://www.sh.chinanews.com/qxdt/2020-01-07/69361.shtml"
                 },
                 {
                     title: "青浦区打出28项“组合拳”，优化营商环境促进投资",

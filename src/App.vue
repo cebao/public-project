@@ -85,7 +85,7 @@
     <!--<v-icon>mdi-open-in-new</v-icon>-->
     <!--</v-btn>-->
 
-    <v-content>
+    <v-content style="padding: 0px;">
       <BasicLayout/>
     </v-content>
 
